@@ -6,11 +6,9 @@ function $$(selector, context = document) {
 
 // Automatic current page link
 // let navLinks = $$("nav a")
-
 // let currentLink = navLinks.find(
 //   (a) => a.host === location.host && a.pathname === location.pathname,
 // );
-
 // currentLink?.classList.add('current');
 
 // Automatic navigation menu
@@ -32,6 +30,19 @@ document.body.prepend(nav);
 for (let p of pages) {
   let url = p.url;
   let title = p.title;
-    url = !url.startsWith('http') ? BASE_PATH + url : url;
-  nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
+  url = !url.startsWith('http') ? BASE_PATH + url : url;
+  let a = document.createElement('a');
+  a.href = url;
+  a.textContent = title;
+  nav.append(a);
+
+  a.classList.toggle(
+    'current', 
+    a.host === location.host && a.pathname === location.pathname,
+  );
+  
+  if (a.host !== location.host){
+    a.target = '_blank'
+  }
 }
+
