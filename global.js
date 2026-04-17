@@ -15,10 +15,10 @@ function $$(selector, context = document) {
 
 // Automatic navigation menu
 let pages = [
-  { url: '/', title: 'Home' },
-  { url: '/projects/', title: 'Projects' },
-  { url: '/resume/', title: 'Resume' },
-  { url: '/contact/', title: 'Contact' },
+  { url: '', title: 'Home' },
+  { url: 'projects/', title: 'Projects' },
+  { url: 'resume/', title: 'Resume' },
+  { url: 'contact/', title: 'Contact' },
   { url: 'https://github.com/LinaSeto', title: 'Profile' },
 ];
 
@@ -32,8 +32,6 @@ document.body.prepend(nav);
 for (let p of pages) {
   let url = p.url;
   let title = p.title;
+    url = !url.startsWith('http') ? BASE_PATH + url : url;
   nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
-  url = !url.startsWith('http') ? BASE_PATH + url : url;
 }
-
-
