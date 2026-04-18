@@ -75,3 +75,20 @@ select.addEventListener('input', function (event) {
 if("colorScheme" in localStorage){
     setColorScheme(localStorage.colorScheme);
 }
+
+
+// contact page
+let form = document.querySelector('form');
+
+form?.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let data = new FormData(form);
+    let url = form.action + '?';
+
+    for (let [name, value] of data) {
+        url += `${name}=${encodeURIComponent(value)}&`;
+    }
+
+    location.href = url;
+});
