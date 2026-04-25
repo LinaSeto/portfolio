@@ -1,62 +1,74 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero commodi velit eaque voluptate quasi ducimus consequuntur voluptatum repellat obcaecati non ea ipsum consectetur quibusdam voluptatem molestiae dolorem, numquam voluptatibus dolor."
+        "title": "Ultra-Processed Food Expository Visualization",
+        "year": 2026,
+        "image": "../images/proj1_vis.png",
+        "description": "Data visualization project intended to show the lack of non ultra-processed choices among the top 10 ultra-processed categories in Target, Walmart, and Whole Foods"
     },
     {
-        "title": "Esse in laudantium vero?",
+        "title": "Police Reform Results Persuasive and Deceptive Visualization",
+        "year": 2026,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Aspernatur mollitia repellat corporis quas quaerat delectus fugiat ex commodi reiciendis saepe alias praesentium labore, reprehenderit blanditiis voluptates at accusamus vel veniam tempora voluptatum ut sequi tempore nesciunt. Fugiat, nostrum!"
+        "description": "Data visualization group project in which we designed one visualization showcasing the increase in complaints against officers despite reform efforts and another arguing the opposite point: that police reform efforts have led to more officers being held accountable."
     },
     {
-        "title": "Quibusdam deserunt voluptatum voluptatem?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Impedit, accusantium eveniet in quod dolorem provident incidunt aspernatur aliquid magni? Laboriosam, unde. Eum labore, qui, officiis optio praesentium, porro rem quasi explicabo sequi quam mollitia pariatur nobis? Optio, dolores?"
+        "title": "IEEE-HKN Projects Portal",
+        "year": 2026,
+        "image": "../images/proj3_vis.png",
+        "description": "Team project where the final product was a webpage for the UCSD Chapter of IEEE-HKN that showcases projects, provides information about the project showcase, and implements a chatbot specific to HKN and HKN projects information using RAG techniques."
     },
     {
-        "title": "Reprehenderit accusantium repellendus quia!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Error mollitia quo nostrum quia quaerat ut necessitatibus non iusto animi laboriosam, molestias ea cumque molestiae corrupti eum, nulla doloremque consequatur, officiis libero rem. Ipsum quasi alias possimus earum nulla!"
+        "title": "Study on the Relationship Between PM2.5 Levels and Birthweight between White and Non-White Groups",
+        "year": 2026,
+        "image": "../images/proj4_vis.png",
+        "description": "A group project performing inference testing through OLS regression and a permutation test to conclude that PM2.5 levels did not affect different race groups differently, but that race group was a good predictor of birthweight."
     },
     {
-        "title": "Corrupti explicabo minima magni.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Commodi officia itaque debitis odit cupiditate sequi vitae aspernatur tenetur quo, quisquam totam reprehenderit doloremque at dicta, labore et perspiciatis possimus ab libero magnam! Quo eveniet debitis fuga temporibus soluta!"
+        "title": "Power Outage Analysis and Prediction Model",
+        "year": 2025,
+        "image": "../images/proj5_vis.png",
+        "description": "This project included inference testing, finding that there are significantly more power outages in high urbanization areas, and model building to predict whether a power outage will be severe using a Random Forest Classifier."
     },
     {
-        "title": "Rem eos libero deleniti.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Perferendis fuga possimus placeat? Porro non blanditiis ipsa repudiandae dignissimos asperiores voluptatibus quis quae accusantium, sequi veritatis reiciendis officiis iste pariatur repellat numquam. Odio incidunt ex tempora doloremque optio fuga."
+        "title": "Data Manipulation Project",
+        "year": 2025,
+        "image": "../images/proj6_vis.png",
+        "description": "This project explored manipulating images, such as through negation or pixelating, and audio, such as through reversing or applying reverb, as well as designing a K Nearest Neighbor Classifier to predict image labels."
     },
     {
-        "title": "Exercitationem iure sapiente harum.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Iusto iure molestias expedita, sapiente ducimus placeat laborum accusamus ex odit adipisci optio unde alias perferendis architecto quasi consequuntur animi tempore ab tenetur dolorum dolores quisquam, suscipit dicta incidunt? Amet!"
+        "title": "Correlation Between Population Growth and Human-Induced Wildfires",
+        "year": 2025,
+        "image": "../images/proj7_vis.png",
+        "description": "This group project included designing a data analysis project to analyze the relationship between human-induced wildfires and population growth in California, identifying geospatial and time series analysis as methods to perform analysis."
     },
     {
-        "title": "Molestiae iure optio repellendus?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Odit consequuntur a, id sapiente voluptatem alias tenetur itaque animi assumenda. Voluptates unde dignissimos ipsam dolor, magnam tempore? Eveniet culpa placeat quos corporis, doloremque minus modi illo in enim officia?"
+        "title": "Statistical Inference, Data Visualization, and Sentiment Analysis of 'Friends'",
+        "year": 2024,
+        "image": "../images/proj8_vis.png",
+        "description": "A group project involving extensive statistical inference and data visualization for different aspects of the TV show 'Friends' including a sentiment analysis of each character's lines."
     },
     {
-        "title": "Ipsam nisi neque rem!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Et vel illo aliquid aliquam. Incidunt quod quia eos dolorem nobis quibusdam explicabo, totam nihil dicta, esse quidem repellat perspiciatis? Cumque, est alias sequi sint nihil eius vel ipsa odio."
+        "title": "Investigation of Customer Demographic for a Coding Bootcamp",
+        "year": 2023,
+        "image": "../images/proj9_vis.png",
+        "description": "This group project for the ASA Fall Data Challenge explored the interest level, target market, coding languages, and potential profit for a coding bootcamp using statistical inference."
     },
     {
-        "title": "Perspiciatis deleniti commodi atque!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Non corrupti sint, quis qui neque ullam aliquid numquam, minima voluptas illo, recusandae odio consequatur quaerat dolorem consequuntur expedita. Eveniet, iste quo. Odit tempore dolore labore dignissimos molestiae dolor alias."
+        "title": "Investigation of Material Footprint Per Capita Across the World",
+        "year": 2023,
+        "image": "../images/proj10_vis.png",
+        "description": "This project consists of a thorough investigation of Material Footprint Per Capita across countries and continents, with a focus on data visualization and visualization analysis."
     },
     {
-        "title": "Aut modi nemo obcaecati.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ad et itaque, inventore perferendis delectus quam sequi quas corrupti nisi nulla corporis dicta quae harum eligendi natus pariatur laboriosam blanditiis dolorem veritatis! Odit, neque eos autem sint ut dolores!"
+        "title": "Analysis of Low Food Security Proportions Over Time",
+        "year": 2023,
+        "image": "../images/proj11_vis.png",
+        "description": "A group project entry for the ASA Statistics Project Competition that explored the increasing trend in proportion of households with very low food security and fit a quadratic model to the association."
     },
     {
-        "title": "Delectus ducimus perspiciatis consectetur.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quasi unde fugiat placeat nesciunt. Similique quis sequi magnam ipsa. Aspernatur voluptates libero maxime laborum, incidunt recusandae sed optio asperiores aliquam tenetur ullam necessitatibus, doloribus, officia exercitationem officiis ab. Repellat."
+        "title": "Analysis of Forest Fire Impact",
+        "year": 2024,
+        "image": "../images/proj12_vis.png",
+        "description": "Group project for the ASA Data Visualization Poster Competition performing an analysis of forest fire intensity and area over time, geospatial analysis, and affect on public global warming perception."
     }
 ]

@@ -1,11 +1,13 @@
 import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 
+// get 3 latest projects
 const projects = await fetchJSON('./lib/projects.json');
 const latestProjects = projects.slice(0, 3);
 
 const projectsContainer = document.querySelector('.projects');
 renderProjects(latestProjects, projectsContainer, 'h2');
 
+// get github stats
 const githubData = await fetchGitHubData('LinaSeto');
 const profileStats = document.querySelector('#profile-stats');
 
