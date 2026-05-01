@@ -19,6 +19,7 @@ nav{
   display: flex;
   margin-bottom: 1em;
   border-bottom: 1px solid var(--border-color);
+  margin-top: 1rem; 
 }
 
 nav a{
@@ -148,9 +149,11 @@ strong {
 /* color scheme */
 .color-scheme{
   position: absolute;
-  top: 1rem;
-  right: 2rem;
+  top: 0.5rem;
+  right: 1rem;
   font-size: 80%;
+  display: flex;
+  gap: 0.5em;
 }
 
 /* github stats */
