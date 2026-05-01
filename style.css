@@ -181,3 +181,57 @@ strong {
   height: 200px; 
   object-fit: cover;
 }
+
+.project-year{
+  color: gray;
+  font-family: serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* projects pie plot */
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+/* projects pie plot legend*/
+.container{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+ .legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.5em;
+  list-style: none;
+  padding: 0.5em;
+  margin: 1em;
+  border: 1px solid oklch(80% 3% 200);
+}
+
+.legend-item{
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+
+/* projects seach bar */
+.searchBar {
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  margin-bottom: 1.5em;
+  -webkit-appearance: none;
+}
