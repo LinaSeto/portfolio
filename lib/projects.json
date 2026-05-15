@@ -1,15 +1,32 @@
 [
     {
+        "title": "Visualizing Bikepaths",
+        "year": 2026,
+        "image": "images/proj14_vis.png",
+        "description": "This project explores bikepaths in Boston and Cambridge, visualizing each station by the traffic at each during different times of day through an interactive webpage.",
+        "url": "https://linaseto.github.io/dsc106-bikewatching/"
+    },
+    {
+        "title": "Climate Change Prediction Interactions",
+        "year": 2026,
+        "image": "images/proj13_vis.png",
+        "description": "A group project designing an interactive webpage to showcase the affects of different aspects of climate change across the globe for different sustainability paths between 2015 and 2100.",
+        "url": "https://linaseto.github.io/dsc106-project3/",
+        "message": "Top 8% Best Project Award"
+    },
+    {
         "title": "Ultra-Processed Food Expository Visualization",
         "year": 2026,
         "image": "images/proj1_vis.png",
-        "description": "Data visualization project intended to show the lack of non ultra-processed choices among the top 10 ultra-processed categories in Target, Walmart, and Whole Foods"
+        "description": "Data visualization project intended to show the lack of non ultra-processed choices among the top 10 ultra-processed categories in Target, Walmart, and Whole Foods.",
+        "message": "Top 4% Best Project Award"
     },
     {
         "title": "Police Reform Results Persuasive and Deceptive Visualization",
         "year": 2026,
         "image": "images/proj2_vis.png",
-        "description": "Data visualization group project in which we designed one visualization showcasing the increase in complaints against officers despite reform efforts and another arguing the opposite point: that police reform efforts have led to more officers being held accountable."
+        "description": "Data visualization group project in which we designed one visualization showcasing the increase in complaints against officers despite reform efforts and another arguing the opposite point: that police reform efforts have led to more officers being held accountable.",
+        "url": "https://ijding.github.io/dsc106-portfolio/projects/project2/project2-dsc106.html"
     },
     {
         "title": "IEEE-HKN Projects Portal",
@@ -27,7 +44,8 @@
         "title": "Power Outage Analysis and Prediction Model",
         "year": 2025,
         "image": "images/proj5_vis.png",
-        "description": "This project included inference testing, finding that there are significantly more power outages in high urbanization areas, and model building to predict whether a power outage will be severe using a Random Forest Classifier."
+        "description": "This project included inference testing, finding that there are significantly more power outages in high urbanization areas, and model building to predict whether a power outage will be severe using a Random Forest Classifier.",
+        "url": "https://linaseto.github.io/power-outage-impact/"
     },
     {
         "title": "Data Manipulation Project",

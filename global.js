@@ -38,11 +38,11 @@ for (let p of pages) {
   nav.append(a);
 
   a.classList.toggle(
-    'current', 
+    'current',
     a.host === location.host && a.pathname === location.pathname,
   );
 
-  if (a.host !== location.host){
+  if (a.host !== location.host) {
     a.target = '_blank'
   }
 }
@@ -63,9 +63,9 @@ document.body.insertAdjacentHTML(
 
 let select = document.querySelector('.color-scheme select')
 
-function setColorScheme(colorScheme){
-    document.documentElement.style.setProperty('color-scheme', colorScheme);
-    select.value = colorScheme;
+function setColorScheme(colorScheme) {
+  document.documentElement.style.setProperty('color-scheme', colorScheme);
+  select.value = colorScheme;
 }
 
 select.addEventListener('input', function (event) {
@@ -73,25 +73,25 @@ select.addEventListener('input', function (event) {
   localStorage.colorScheme = event.target.value;
 });
 
-if("colorScheme" in localStorage){
-    setColorScheme(localStorage.colorScheme);
+if ("colorScheme" in localStorage) {
+  setColorScheme(localStorage.colorScheme);
 }
 
 
 // contact page
 let form = document.querySelector('form');
 
-form?.addEventListener('submit', function(event) {
-    event.preventDefault();
+form?.addEventListener('submit', function (event) {
+  event.preventDefault();
 
-    let data = new FormData(form);
-    let url = form.action + '?';
+  let data = new FormData(form);
+  let url = form.action + '?';
 
-    for (let [name, value] of data) {
-        url += `${name}=${encodeURIComponent(value)}&`;
-    }
+  for (let [name, value] of data) {
+    url += `${name}=${encodeURIComponent(value)}&`;
+  }
 
-    location.href = url;
+  location.href = url;
 });
 
 
@@ -117,14 +117,25 @@ export async function fetchJSON(url) {
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
 
-  for(const project of projects){
+  for (const project of projects) {
     const article = document.createElement('article');
+
+    const urlHTML = project.url
+      ? `<p class="project-link"><a href="${project.url}" target="_blank" rel="noopener">View project ↗</a></p>`
+      : '';
+
+    const messageHTML = project.message
+      ? `<p class="project-message">${project.message}</p>`
+      : '';
+
     article.innerHTML = `
       <${headingLevel}>${project.title}</${headingLevel}>
       <img src="${BASE_PATH}${project.image}" alt="${project.title}">
       <div>
         <p>${project.description}</p>
         <p class="project-year">${project.year}</p>
+        ${urlHTML}
+        ${messageHTML}
       </div>
       `;
     containerElement.appendChild(article);
