@@ -274,7 +274,7 @@ function renderScatterPlot(data, commits) {
 
     dots
         .selectAll('circle')
-        .data(sortedCommits, (d) => d.id) 
+        .data(sortedCommits, (d) => d.id)
         .join('circle')
         .attr('cx', (d) => xScale(d.datetime))
         .attr('cy', (d) => yScale(d.hourFrac))
@@ -317,62 +317,102 @@ let timeScale = d3
 let commitMaxTime = timeScale.invert(commitProgress);
 let filteredCommits = commits;
 
+// unit viz for files
+function updateFileDisplay(filteredCommits) {
+    const lines = filteredCommits.flatMap((d) => d.lines);
+    const colors = d3.scaleOrdinal(d3.schemeTableau10);
+    const files = d3
+        .groups(lines, (d) => d.file)
+        .map(([name, lines]) => {
+            return { name, lines };
+        })
+        .sort((a, b) => b.lines.length - a.lines.length);
+
+    const filesContainer = d3
+        .select('#files')
+        .selectAll('div')
+        .data(files, (d) => d.name)
+        .join(
+            // This code only runs when the div is initially rendered
+            (enter) =>
+                enter.append('div').call((div) => {
+                    div.append('dt').append('code');
+                    div.append('dd');
+                }),
+        );
+
+    // This code updates the div info
+    // filesContainer.select('dt > code').text((d) => d.name);
+    filesContainer
+        .select('dt > code')
+        .html((d) => `${d.name}<small>${d.lines.length} lines</small>`)
+    // filesContainer.select('dd').text((d) => `${d.lines.length} lines`);
+    // append one div for each line
+    filesContainer
+        .select('dd')
+        .selectAll('div')
+        .data((d) => d.lines)
+        .join('div')
+        .attr('class', 'loc')
+        .attr('style', (d) => `--color: ${colors(d.type)}`);
+}
+
 renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
 
 function updateScatterPlot(data, commits) {
-  const width = 1000;
-  const height = 600;
-  const margin = { top: 10, right: 10, bottom: 30, left: 20 };
-  const usableArea = {
-    top: margin.top,
-    right: width - margin.right,
-    bottom: height - margin.bottom,
-    left: margin.left,
-    width: width - margin.left - margin.right,
-    height: height - margin.top - margin.bottom,
-  };
+    const width = 1000;
+    const height = 600;
+    const margin = { top: 10, right: 10, bottom: 30, left: 20 };
+    const usableArea = {
+        top: margin.top,
+        right: width - margin.right,
+        bottom: height - margin.bottom,
+        left: margin.left,
+        width: width - margin.left - margin.right,
+        height: height - margin.top - margin.bottom,
+    };
 
-  const svg = d3.select('#chart').select('svg');
+    const svg = d3.select('#chart').select('svg');
 
-  xScale = xScale.domain(d3.extent(commits, (d) => d.datetime));
+    xScale = xScale.domain(d3.extent(commits, (d) => d.datetime));
 
-  const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
-  const rScale = d3.scaleSqrt().domain([minLines, maxLines]).range([4, 30]);
+    const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
+    const rScale = d3.scaleSqrt().domain([minLines, maxLines]).range([4, 30]);
 
-  const xAxis = d3.axisBottom(xScale);
-  const xAxisGroup = svg.select('g.x-axis');
-  xAxisGroup.selectAll('*').remove();
-  xAxisGroup.call(xAxis);
+    const xAxis = d3.axisBottom(xScale);
+    const xAxisGroup = svg.select('g.x-axis');
+    xAxisGroup.selectAll('*').remove();
+    xAxisGroup.call(xAxis);
 
-  // Color scale
-  const colorScale = d3.scaleLinear()
-    .domain([0, 6, 12, 18, 24])
-    .range(['#1e3a8a', '#3b82f6', '#fbbf24', '#3b82f6', '#1e3a8a'])
-    .interpolate(d3.interpolateLab);
+    // Color scale
+    const colorScale = d3.scaleLinear()
+        .domain([0, 6, 12, 18, 24])
+        .range(['#1e3a8a', '#3b82f6', '#fbbf24', '#3b82f6', '#1e3a8a'])
+        .interpolate(d3.interpolateLab);
 
-  const dots = svg.select('g.dots');
-  const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
+    const dots = svg.select('g.dots');
+    const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
 
-  dots
-    .selectAll('circle')
-    .data(sortedCommits, (d) => d.id)
-    .join('circle')
-    .attr('cx', (d) => xScale(d.datetime))
-    .attr('cy', (d) => yScale(d.hourFrac))
-    .attr('r', (d) => rScale(d.totalLines))
-    .attr('fill', (d) => colorScale(d.hourFrac))
-    .style('fill-opacity', 0.7)
-    .on('mouseenter', (event, commit) => {
-      d3.select(event.currentTarget).style('fill-opacity', 1);
-      renderTooltipContent(commit);
-      updateTooltipVisibility(true);
-      updateTooltipPosition(event);
-    })
-    .on('mouseleave', (event) => {
-      d3.select(event.currentTarget).style('fill-opacity', 0.7);
-      updateTooltipVisibility(false);
-    });
+    dots
+        .selectAll('circle')
+        .data(sortedCommits, (d) => d.id)
+        .join('circle')
+        .attr('cx', (d) => xScale(d.datetime))
+        .attr('cy', (d) => yScale(d.hourFrac))
+        .attr('r', (d) => rScale(d.totalLines))
+        .attr('fill', (d) => colorScale(d.hourFrac))
+        .style('fill-opacity', 0.7)
+        .on('mouseenter', (event, commit) => {
+            d3.select(event.currentTarget).style('fill-opacity', 1);
+            renderTooltipContent(commit);
+            updateTooltipVisibility(true);
+            updateTooltipPosition(event);
+        })
+        .on('mouseleave', (event) => {
+            d3.select(event.currentTarget).style('fill-opacity', 0.7);
+            updateTooltipVisibility(false);
+        });
 }
 
 function onTimeSliderChange() {
@@ -388,6 +428,7 @@ function onTimeSliderChange() {
 
     filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
     updateScatterPlot(data, filteredCommits);
+    updateFileDisplay(filteredCommits);
 }
 
 document
@@ -395,3 +436,4 @@ document
     .addEventListener('input', onTimeSliderChange);
 
 onTimeSliderChange();
+
