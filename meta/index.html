@@ -17,29 +17,28 @@
 
     <p>This page contains stats about the code of this website</p>
 
-    <div id="slider-container">
+    <!-- <div id="slider-container">
         <label>
             Show commits until:
             <input type="range" id="commit-progress" min="0" max="100" value="100">
             <time id="commit-time"></time>
         </label>
-    </div>
-
-    <dl id="files">
-        <!-- we want the following structure for each file:
-        <div>
-            <dt>
-                <code>{file.name}</code>
-            </dt>
-            <dd>{file.lines.length} lines</dd>
-        </div> -->
-    </dl>
+    </div> -->
 
     <h2>Summary</h2>
     <div id="stats"></div>
 
-    <h2>Commits by time of day</h2>
-    <div id="chart"></div>
+    <div id="scrolly-1">
+        <div id="scatter-story">
+            <h2>Evolution over time</h2>
+        </div>
+        <div id="scatter-plot">
+            <h2>Commits by time of day</h2>
+            <div id="chart"></div>
+            <p id="selection-count">No commits selected</p>
+            <dl id="language-breakdown" class="stats"></dl>
+        </div>
+    </div>
 
     <dl id="commit-tooltip" class="info tooltip" hidden>
         <dt>Commit</dt>
@@ -61,8 +60,12 @@
 
     </dl>
 
-    <p id="selection-count">No commits selected</p>
-    <dl id="language-breakdown" class="stats"></dl>
+    <div id="scrolly-2">
+        <div id="files-plot">
+            <dl id="files"></dl>
+        </div>
+        <div id="files-story"></div>
+    </div>
 
 </body>
 

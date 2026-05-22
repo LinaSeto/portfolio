@@ -388,16 +388,16 @@ circle.selected {
 #language-breakdown {
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
-  margin: 1.5em 0;
-  padding: 1.25em 1.5em;
+  gap: 1em;
+  margin: 0.5em 0;
+  padding: 0.6em 0.85em;
   background-color: rgba(0, 0, 0, 0.02);
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 #language-breakdown dt {
-  font-size: 0.7em;
+  font-size: 0.5em;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -406,13 +406,13 @@ circle.selected {
 }
 
 #language-breakdown dd {
-  margin: 0 2em 0 0;
-  font-size: 1.3em;
+  margin: 0 0.6em 0 0;
+  font-size: 0.75em;
   font-weight: 500;
 }
 
 /* slider on meta page */
-#slider-container label {
+/* #slider-container label {
   display: flex;
   align-items: baseline;
   gap: 0.5rem;
@@ -428,7 +428,7 @@ circle.selected {
   margin-left: auto;
   flex-basis: 100%;
   text-align: right;
-}
+} */
 
 /* unit viz for files */
 #files {
@@ -473,4 +473,63 @@ circle.selected {
   display: block;
   font-size: 0.7em;
   opacity: 0.6;
+}
+
+/* scrollytelling */
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  >* {
+    flex: 1;
+  }
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 58vh;
+  padding-bottom: 2rem;
+}
+
+#chart svg {
+  max-height: 60vh;
+}
+
+#selection-count {
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+/* scrolly for unit vis */
+#scrolly-2 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+#scrolly-2>* {
+  flex: 1;
+}
+
+#files-story {
+  position: relative;
+}
+
+#files-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 90vh;
+  overflow-y: auto;
+  padding-bottom: 2rem;
 }
