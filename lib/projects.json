@@ -11,8 +11,7 @@
         "year": 2026,
         "image": "images/proj13_vis.png",
         "description": "A group project designing an interactive webpage to showcase the affects of different aspects of climate change across the globe for different sustainability paths between 2015 and 2100.",
-        "url": "https://linaseto.github.io/dsc106-project3/",
-        "message": "Top 8% Best Project Award"
+        "url": "https://linaseto.github.io/dsc106-project3/"
     },
     {
         "title": "Ultra-Processed Food Expository Visualization",
@@ -26,7 +25,8 @@
         "year": 2026,
         "image": "images/proj2_vis.png",
         "description": "Data visualization group project in which we designed one visualization showcasing the increase in complaints against officers despite reform efforts and another arguing the opposite point: that police reform efforts have led to more officers being held accountable.",
-        "url": "https://ijding.github.io/dsc106-portfolio/projects/project2/project2-dsc106.html"
+        "url": "https://ijding.github.io/dsc106-portfolio/projects/project2/project2-dsc106.html",
+        "message": "Top 8% Best Project Award"
     },
     {
         "title": "IEEE-HKN Projects Portal",
